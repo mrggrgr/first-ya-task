@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Телепрограмма</title>
+
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+    <div class="container tv">
+        <div class="navbar">
+            <h1 class="heading">Телепрограмма</h1>
+            <div class="panel">
+                <ul class="days">
+                    <li><a href="#" id="monday" class="active day-link">Пн</a></li>
+                    <li><a href="#" id="tuesday" class="day-link">Вт</a></li>
+                    <li><a href="#" id="wednesday" class="day-link">Ср</a></li>
+                    <li><a href="#" id="thursday" class="day-link">Чт</a></li>
+                    <li><a href="#" id="friday" class="day-link">Пт</a></li>
+                    <li><a href="#" id="saturday" class="day-link">Сб</a></li>
+                    <li><a href="#" id="sunday" class="day-link">Вс</a></li>
+                </ul>
+                <div class="filter">
+                    <div class="telecast-by-category">
+                        <label class="checkbox-button" onchange="filterTelecastByCategory(this)">
+                            <input class="button" type="checkbox" value="Сериалы" role="button">
+                            <span class="text">Сериалы</span>
+                        </label>
+                    </div>
+                    <div class="telecast-by-category">
+                        <label class="checkbox-button" onchange="filterTelecastByCategory(this)">
+                            <input class="button" type="checkbox" value="Спорт" role="button">
+                            <span class="text">Спорт</span>
+                        </label>
+                    </div>
+                    <div class="telecast-by-category">
+                        <label class="checkbox-button" onchange="filterTelecastByCategory(this)">
+                            <input class="button" type="checkbox" value="Фильмы" role="button">
+                            <span class="text">Фильмы</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div id="tv-programm" class="tv-programm">
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/tv-programm.js"></script>
+    <script>
+        // по умолчанию показать телепрограмму на понедельник
+        mondayTVProgramm.display();
+    </script>
+
+</body>
+
+</html>
